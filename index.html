@@ -1,80 +1,96 @@
-﻿<!DOCTYPE HTML>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>李睿睿是世界上最美的女人，我爱她</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="生日礼物，惊喜,有趣,最美" />
-	<meta name="description" content="世界上最美的女人，她爱我 ಥ_ಥ " />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="css/ohmygod.css" rel="stylesheet" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>邹远君&李睿</title>
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e9e0ed8d2dd56059cc040dc1f05b7424";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
 
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<audio  height="100" width="100" autoplay="autoplay",>
+<source src="mp3/就是爱你.mp3" type="audio/mp3" />
+<embed height="100" width="100" src="小果 - 蒲公英的梦想.mp3" />
+</audio>
 
 </head>
+
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/1.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/2.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/3.jpg" alt="...">
-				</a>
-			</div>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			
+			新郎 ： <span class="keyword">Mr 邹远君</span><br />
+			新娘 ： <span class="keyword">Mrs 李睿</span><br /><br />
+			<span class="comments">时间： </span><br />
+			公元<span class="keyword">2019</span>年<span class="keyword">1</span>月<span class="keyword">8</span>号，农历初三，星期二;<br /><br />
+			<span class="comments">地点：</span><br />
+			新建区<span class="keyword">独一处</span>酒店<br /><br />
+			<span class="keyword">恭请各位光临</span><br /><br />
+			见证我们<span class="keyword">幸福</span>的时刻。<br />
+	
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, I love you forever;<br />
 		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/4.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/5.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/6.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/7.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/8.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://zouyuanjun.github.io" class="thumbnail">
-					<img src="img/9.jpg" alt="...">
-				</a>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 邹先生</div>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2013, 9, 3);
+together.setHours(17);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both"></div>
 </body>
 </html>
